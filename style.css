@@ -1,0 +1,126 @@
+/* Reset css standard */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font Family */
+@font-face {
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/Overpass/Overpass-VariableFont_wght.ttf");
+}
+
+/* Colors */
+:root {
+  --Orange-500: hsl(25, 97%, 53%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-400: hsl(214, 24%, 22%);
+  --Grey-900: hsl(213, 19%, 18%);
+  --Grey-950: hsl(216, 12%, 8%);
+
+  --Font-Family: Overpass;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--Font-Family);
+  background-color: var(--Grey-950);
+  padding: 20px;
+  color: var(--White);
+}
+
+/* Icon Star */
+.rating-start {
+  width: 375px;
+  height: auto;
+  background: var(--Grey-900);
+  border-radius: 2rem;
+  padding: 24px;
+}
+.rating-start__star {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  background: var(--Grey-400);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+/* Title */
+.rating-start__title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Text content */
+.rating-start__text {
+  color: var(--Grey-500);
+  font-size: 15px;
+}
+
+/* List item rating */
+.rating-start__feedback {
+  margin: 24px 0;
+}
+.rating-start__list-item {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.rating-start__item-selected {
+  width: 40px;
+  height: 40px;
+  background: var(--Grey-400);
+  color: var(--Grey-500);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.rating-start__item-selected:hover {
+  background: var(--White);
+  color: var(--Grey-400)
+}
+.selected {
+  background: var(--Orange-500);
+}
+
+/* Button submit */
+#button-submit {
+  width: 90%;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 0;
+  border-radius: 50px;
+  background: var(--Orange-500);
+  color: var(--Grey-950);
+  font-weight: 700;
+  cursor: pointer;
+}
+#button-submit:hover {
+  background: var(--White);
+}
+
+/* Footer attribution */
+.attribution { 
+  margin-top: 16px;
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
